@@ -38,6 +38,13 @@ func GetCommands() commands {
 			"register": handlerRegister,
 			"reset": handlerReset,
 			"users": handlerUsers,
+			"agg": handlerAgg,
+			"addfeed": handlerAddFeed,
+			"feeds": handlerFeeds,
+			"follow": handlerFollow,
+			"following": handlerFollowing,
+			"unfollow": handlerUnfollow,
+			"browse": handlerBrowse,
 		},
 	}
 }
@@ -53,3 +60,9 @@ func (c *commands) Run(s *state, cmd Command) error {
 	}	
 	return nil
 }
+
+
+// func requireLogin(handler func(s *state, c Command, u database.User) error) func(*state, Command) error {
+
+
+// }
